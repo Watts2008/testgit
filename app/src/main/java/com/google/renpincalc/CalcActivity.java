@@ -18,7 +18,7 @@ public class CalcActivity extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calc);
         result_tv = (TextView)findViewById(R.id.result_tv);
-
+        System.out.print("在子分支里面开发");
         Intent intent = getIntent();
         String data = intent.getData().toString();
         String name = data.replace("calc://", "");
@@ -40,6 +40,7 @@ public class CalcActivity extends Activity{
             desc = "你有偷窥别人的人品";
         }else {
             desc = "你的人品..,hehe";
+
         }
         result_tv.setText(name+"的人品为："+rp+"\n"+desc);
     }
